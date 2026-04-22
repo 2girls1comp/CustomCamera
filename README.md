@@ -1,7 +1,5 @@
 # CustomCamera
-A script for GTA V that toggles a custom camera
-
-A simple script that creates a custom camera to be used for different purposes.
+A simple script for GTA V that creates a custom camera to be used for different purposes.
 
 ## Installation
 Copy the .cs into your scripts folder. Requires Script Hook V and Script Hook V DOT NET
