@@ -52,27 +52,27 @@ namespace CustomCamera
             Vector3 camUp = myCamera.UpVector;
 
             //camera movement controls
-            if (Game.IsKeyPressed(Keys.W))
+            if (Game.IsKeyPressed(Keys.I))
             {
                 camPos += camForward * moveSpeed;
             }
-            if (Game.IsKeyPressed(Keys.S))
+            if (Game.IsKeyPressed(Keys.K))
             {
                 camPos -= camForward * moveSpeed;
             }
-            if (Game.IsKeyPressed(Keys.A))
+            if (Game.IsKeyPressed(Keys.J))
             {
                 camPos -= camRight * moveSpeed;
             }
-            if (Game.IsKeyPressed(Keys.D))
+            if (Game.IsKeyPressed(Keys.L))
             {
                 camPos += camRight * moveSpeed;
             }
-            if (Game.IsKeyPressed(Keys.Q))
+            if (Game.IsKeyPressed(Keys.U))
             {
                 camPos += camUp * moveSpeed;
             }
-            if (Game.IsKeyPressed(Keys.E))
+            if (Game.IsKeyPressed(Keys.O))
             {
                 camPos -= camUp * moveSpeed;
             }
@@ -107,8 +107,6 @@ namespace CustomCamera
             {
                 if(myCamera== null || !myCamera.IsActive)
                 {
-                    Game.Player.Character.Task.StandStill(-1);
-                    Game.Player.Character.IsPositionFrozen = true;
                     //define camera position, rotation and field of view
                     //Vector3 camPos = Game.Player.Character.GetOffsetPosition(new Vector3(0f, 0f, 0f));//new Vector3(25.5f, 537.5f, 176f);
                     //Vector3 camRot = new Vector3(0.0f, 0.0f, 135.9f);
@@ -131,7 +129,6 @@ namespace CustomCamera
                 }
                 else
                 {
-                    Game.Player.Character.IsPositionFrozen = false;
                     //deactivate the camera
                     World.RenderingCamera = null;
                     myCamera.IsActive= false;
